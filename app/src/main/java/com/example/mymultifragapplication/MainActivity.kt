@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         val tr = supportFragmentManager.beginTransaction()
         tr.replace(binding.frmFrag.id , InputFragment("hahaha"))
         tr.commit()
-        enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
