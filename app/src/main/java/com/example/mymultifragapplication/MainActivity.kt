@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
 
         val tr = supportFragmentManager.beginTransaction()
-        tr.replace(binding.frmFrag.id , InputFragment("hahaha"))
+        tr.replace(binding.frmFrag.id , InputFragment("input"))
         tr.commit()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
