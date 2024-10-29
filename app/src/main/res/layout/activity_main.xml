@@ -12,31 +12,35 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="입력" />
-
-            <Button
-                android:id="@+id/btn_result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="결과" />
-        </LinearLayout>
-
         <FrameLayout
             android:id="@+id/frm_frag"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </FrameLayout>
+            android:layout_height="72dp"></FrameLayout>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="캘린더" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="운동량" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="체중 기록" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="Button" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
