@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mymultifragapplication.databinding.FragmentInputBinding
 
-class InputFragment(var str: String) : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
+class InputFragment() : Fragment() {
+    var text: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +23,18 @@ class InputFragment(var str: String) : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val binding = FragmentInputBinding.inflate(inflater, container, false)
-        binding.editText.setText(str)
+        binding.editText.setText(text)
         // Inflate the layout for this fragment
         return binding.root
     }
 
-//    companion object {
-//        @JvmStatic
-//        fun newInstance(param1: String, param2: String) =
-//            InputFragment().apply {
-//                arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                    putString(ARG_PARAM2, param2)
-//                }
-//            }
-//    }
+    companion object {
+        @JvmStatic
+        fun newInstance(str: String) =
+            InputFragment().apply {
+                arguments = Bundle().apply {
+                    putString("Text",str)
+                }
+            }
+    }
 }
